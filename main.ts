@@ -12,4 +12,5 @@ import { join } from 'node:path';
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 mkdirSync(outDir, { recursive: true });
+// Entry caps (RULES.txt): entry.png must stay within 1 MiB and 1024x1024 px.
 copyFileSync(new URL('./entry.png', import.meta.url), join(outDir, 'entry.png'));
